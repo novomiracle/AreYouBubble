@@ -1,7 +1,2 @@
-res://end_screen.tscn
-res://end_text.gd
-res://scripts/global.gd
+res://scenes/map1.tscn
 res://scenes/scene_switcher.tscn
-res://scenes/mainCharacter.tscn
-res://scripts/scene_switcher.gd
-res://levels/test_scene.tscn
