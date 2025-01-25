@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy6e6b6rwl4jt"]
+
+[ext_resource type="Script" path="res://end_text.gd" id="1_qjbk6"]
+[ext_resource type="Texture2D" uid="uid://dec3dg8fafqpe" path="res://art/dialogue_box.png" id="2_om1mx"]
+
+[node name="Node2D" type="CanvasLayer"]
+script = ExtResource("1_qjbk6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 438.0
+offset_top = 150.0
+offset_right = 724.0
+offset_bottom = 343.0
+scale = Vector2(4, 4)
+
+[node name="yes" type="TextureButton" parent="."]
+visible = false
+offset_left = 118.0
+offset_top = 832.0
+offset_right = 762.0
+offset_bottom = 1034.0
+disabled = true
+texture_normal = ExtResource("2_om1mx")
+stretch_mode = 0
+
+[node name="no" type="TextureButton" parent="."]
+visible = false
+offset_left = 1135.0
+offset_top = 817.0
+offset_right = 1779.0
+offset_bottom = 1019.0
+disabled = true
+texture_normal = ExtResource("2_om1mx")
+stretch_mode = 0
+
+[node name="You?" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 569.0
+offset_top = 355.0
+offset_right = 680.0
+offset_bottom = 396.0
+scale = Vector2(8, 8)
+text = "IS THIS YOU?"
+
+[connection signal="pressed" from="yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="no" to="." method="_on_no_pressed"]
