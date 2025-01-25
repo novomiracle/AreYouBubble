@@ -1,0 +1,21 @@
+[gd_scene load_steps=7 format=3 uid="uid://fbabi76pnqmr"]
+
+[ext_resource type="PackedScene" uid="uid://ci24vgsmdi40a" path="res://scenes/coin.tscn" id="1_yp18e"]
+[ext_resource type="PackedScene" uid="uid://hugihwcpq5oy" path="res://scenes/spikes.tscn" id="2_548yw"]
+[ext_resource type="PackedScene" uid="uid://c0o7c5gymdpl5" path="res://jumpy_mushroom.tscn" id="3_t8xki"]
+[ext_resource type="PackedScene" uid="uid://c1rdnf6b1yni1" path="res://scenes/ground.tscn" id="4_d4vd0"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_hbsik"]
+scenes/1/scene = ExtResource("1_yp18e")
+scenes/2/scene = ExtResource("2_548yw")
+scenes/3/scene = ExtResource("3_t8xki")
+scenes/4/scene = ExtResource("4_d4vd0")
+
+[sub_resource type="TileSet" id="TileSet_buevb"]
+tile_size = Vector2i(127, 45)
+sources/0 = SubResource("TileSetScenesCollectionSource_hbsik")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_buevb")
+format = 2
+layer_0/tile_data = PackedInt32Array(327680, 0, 262144, 327684, 0, 262144, 327688, 0, 262144, 262143, 0, 196608, 196609, 0, 196608, 196611, 0, 196608, 327692, 0, 262144, 131082, 0, 131072, 131079, 0, 131072, 131077, 0, 131072, 131080, 0, 131072, 131081, 0, 131072, 131083, 0, 131072, 65549, 0, 65536, 131084, 0, 65536, 11, 0, 65536, 10, 0, 65536, 12, 0, 65536, 327696, 0, 262144, 65556, 0, 262144, -65512, 0, 262144, 196622, 0, 196608, 196623, 0, 196608, 196624, 0, 196608, 196625, 0, 196608, -131053, 0, 131072, -131052, 0, 131072, -131051, 0, 131072, -327661, 0, 65536, -327660, 0, 65536, -393196, 0, 65536, -327659, 0, 65536, -327657, 0, 65536, -262119, 0, 131072)

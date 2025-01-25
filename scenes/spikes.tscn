@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://hugihwcpq5oy"]
+
+[ext_resource type="PackedScene" uid="uid://cogtbb8srrx2r" path="res://hurtyThing.tscn" id="1_8wgrt"]
+[ext_resource type="Texture2D" uid="uid://buo5adn82yrb0" path="res://art/Thorns.png" id="2_b501y"]
+
+[node name="Node2D" instance=ExtResource("1_8wgrt")]
+position = Vector2(0, 26)
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource("2_b501y")

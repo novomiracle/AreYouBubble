@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmvt4ahn5mvvt"]
+
+[ext_resource type="Texture2D" uid="uid://dec3dg8fafqpe" path="res://art/dialogue_box.png" id="1_wui1t"]
+[ext_resource type="Script" path="res://scripts/option.gd" id="2_tyj12"]
+
+[node name="Button" type="Button"]
+visible = false
+offset_right = 116.0
+offset_bottom = 71.0
+disabled = true
+icon = ExtResource("1_wui1t")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_tyj12")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

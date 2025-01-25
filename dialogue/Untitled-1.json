@@ -1,0 +1,26 @@
+{
+	"characters":["puddle","tree"],
+	"interaction":"interact",
+	"change_level":true,
+	"dialogue":[{
+		"character":1,
+		"text":"khgkhgilgkghb",
+		"options":[{
+			"text":"adsdsda",
+			"path":1,
+			
+		},
+		{
+			"text":"fsaf",
+			"path":2,
+		}]
+
+	},{
+		"text":"asfearwsd",
+		"character":0,
+		"end":true
+	},{
+		"character":1,
+		"text":"asfafas",
+	}]
+}

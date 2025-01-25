@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cogtbb8srrx2r"]
+
+[ext_resource type="Texture2D" uid="uid://dec3dg8fafqpe" path="res://art/dialogue_box.png" id="1_d585e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5lbji"]
+size = Vector2(141, 120)
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-2.38419e-07, -10)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("1_d585e")
+
+[node name="hurt" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurt"]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_5lbji")

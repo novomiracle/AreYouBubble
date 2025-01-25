@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfwop53bhmpg3"]
+
+[ext_resource type="PackedScene" uid="uid://dh0egn5pas6bj" path="res://scenes/mainCharacter.tscn" id="1_k7xmj"]
+[ext_resource type="PackedScene" uid="uid://crtd4t0pf5xce" path="res://scenes/npc.tscn" id="2_5w4as"]
+[ext_resource type="PackedScene" uid="uid://bolgcrdfdxvv" path="res://projectile.tscn" id="3_ieak7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_040mi"]
+size = Vector2(539, 134)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(294, 328)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_k7xmj")]
+position = Vector2(292, 81)
+
+[node name="Node2D" parent="." instance=ExtResource("3_ieak7")]
+position = Vector2(107, 122)
+motion_mode = 1
+slide_on_ceiling = false
+direction = Vector2(1, 0)
+speed = 500.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(448, 221)
+shape = SubResource("RectangleShape2D_040mi")
+
+[node name="StaticBody2D" parent="StaticBody2D" instance=ExtResource("2_5w4as")]
+position = Vector2(624, 103)
