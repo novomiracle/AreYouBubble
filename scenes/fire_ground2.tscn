@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bitbhfwa2w2tj"]
+
+[ext_resource type="Texture2D" uid="uid://xbajiolm2r5i" path="res://art/fire/Ground tile B.png" id="1_lljup"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iofxo"]
+size = Vector2(1554, 319)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(-253, 52)
+scale = Vector2(0.326195, 0.326195)
+
+[node name="Ground" type="Sprite2D" parent="."]
+position = Vector2(774.077, -168.611)
+scale = Vector2(1.7732, 0.841863)
+texture = ExtResource("1_lljup")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(772.803, -164.509)
+shape = SubResource("RectangleShape2D_iofxo")

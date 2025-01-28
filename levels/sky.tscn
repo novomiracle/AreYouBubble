@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://8c1o01aym1a6"]
+
+[ext_resource type="PackedScene" uid="uid://cw7ni6wich45d" path="res://scenes/map2.tscn" id="1_cnclf"]
+[ext_resource type="PackedScene" uid="uid://bl06va6x67ou3" path="res://scenes/timerCounter.tscn" id="2_h0rlh"]
+[ext_resource type="PackedScene" uid="uid://dh0egn5pas6bj" path="res://scenes/mainCharacter.tscn" id="3_7q0td"]
+[ext_resource type="PackedScene" uid="uid://jieyi2noewvp" path="res://scenes/cameraman.tscn" id="4_sfvqy"]
+[ext_resource type="Texture2D" uid="uid://cb5dolf3j6sjc" path="res://art/Background for level 2.png" id="5_8sxng"]
+[ext_resource type="PackedScene" uid="uid://b40377nfjiu18" path="res://scenes/Saama.tscn" id="6_x8joj"]
+[ext_resource type="PackedScene" uid="uid://cwagj52xy736i" path="res://levels/cloud.tscn" id="7_egyy5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="BackgroundForLevel2" type="Sprite2D" parent="CanvasLayer2"]
+position = Vector2(959, 535)
+scale = Vector2(0.503385, 0.516204)
+texture = ExtResource("5_8sxng")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("2_h0rlh")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_7q0td")]
+position = Vector2(511, 168)
+
+[node name="Node2D" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_sfvqy")]
+player = NodePath("../CharacterBody2D")
+
+[node name="TileMap" parent="." instance=ExtResource("1_cnclf")]
+position = Vector2(65, 465)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("6_x8joj")]
+position = Vector2(1312, 75)
+scale = Vector2(0.0800006, 0.0800006)
+dialogue_accept = "res://dialogue/Samaa_1.json"
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("6_x8joj")]
+position = Vector2(9718, -2862)
+scale = Vector2(0.0800006, 0.0800006)
+neutral = "res://dialogue/Samaa_neutral.json"
+interacti = true
+dialogue_accept = "res://dialogue/Samaa_yay.json"
+dialogue_decline = "res://dialogue/Samaa_alone.json"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Node2D2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_egyy5")]
+position = Vector2(1862, 19)
+player = NodePath("../CharacterBody2D")
+
+[node name="Node2D3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_egyy5")]
+position = Vector2(451, -931)
+player = NodePath("../CharacterBody2D")
+
+[node name="Node2D4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_egyy5")]
+position = Vector2(1822, -1490)
+player = NodePath("../CharacterBody2D")
+
+[node name="Node2D5" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_egyy5")]
+position = Vector2(2190, -753)
+player = NodePath("../CharacterBody2D")
+
+[node name="Node2D6" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_egyy5")]
+position = Vector2(-527, -1409)
+player = NodePath("../CharacterBody2D")

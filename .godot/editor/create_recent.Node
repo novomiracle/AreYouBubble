@@ -1,4 +1,14 @@
-RichTextLabel
-TextureButton
+VisibleOnScreenNotifier2D
+TextureRect
 Control
+ParallaxLayer
 CanvasLayer
+CollisionShape2D
+Area2D
+Timer
+Node2D
+TileMap
+AnimationPlayer
+StaticBody2D
+Label
+TextEdit

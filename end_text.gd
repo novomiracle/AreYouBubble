@@ -3,9 +3,10 @@ extends CanvasLayer
 var chars = ""
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	print(Global.characterstics)
 	for i in Global.characterstics:
-		chars += i
-	$RichTextLabel.text = "you " + chars
+		chars += i +", "
+	$RichTextLabel.text = "you are" + chars
 	
 
 func _process(delta: float) -> void:

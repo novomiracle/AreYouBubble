@@ -1,0 +1,137 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpl1wokkrjptm"]
+
+[ext_resource type="Texture2D" uid="uid://bpb4vnfmk0j3q" path="res://art/Rain1212.png" id="1_h11rp"]
+[ext_resource type="Script" path="res://levels/grad.gd" id="1_utyqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mj7l8"]
+size = Vector2(1826, 1081)
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(7.56, 7.56)
+script = ExtResource("1_utyqv")
+
+[node name="hurt" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurt"]
+position = Vector2(714, -319.5)
+shape = SubResource("RectangleShape2D_mj7l8")
+
+[node name="Rain1212" type="Sprite2D" parent="."]
+position = Vector2(-2, 37)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1213" type="Sprite2D" parent="."]
+position = Vector2(115, 19)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1214" type="Sprite2D" parent="."]
+position = Vector2(41, -176)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1215" type="Sprite2D" parent="."]
+position = Vector2(422.691, -45.25)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1216" type="Sprite2D" parent="."]
+position = Vector2(539.691, -63.25)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1217" type="Sprite2D" parent="."]
+position = Vector2(465.691, -258.25)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1218" type="Sprite2D" parent="."]
+position = Vector2(807.691, 54)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1219" type="Sprite2D" parent="."]
+position = Vector2(924.691, 36)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1220" type="Sprite2D" parent="."]
+position = Vector2(850.691, -159)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1221" type="Sprite2D" parent="."]
+position = Vector2(1232.38, -28.25)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1222" type="Sprite2D" parent="."]
+position = Vector2(1349.38, -46.25)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1223" type="Sprite2D" parent="."]
+position = Vector2(1275.38, -241.25)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1224" type="Sprite2D" parent="."]
+position = Vector2(93.6909, -385)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1225" type="Sprite2D" parent="."]
+position = Vector2(210.691, -403)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1226" type="Sprite2D" parent="."]
+position = Vector2(136.691, -598)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1227" type="Sprite2D" parent="."]
+position = Vector2(518.382, -467.25)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1228" type="Sprite2D" parent="."]
+position = Vector2(635.382, -485.25)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1229" type="Sprite2D" parent="."]
+position = Vector2(561.382, -680.25)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1230" type="Sprite2D" parent="."]
+position = Vector2(903.382, -368)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1231" type="Sprite2D" parent="."]
+position = Vector2(1020.38, -386)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1232" type="Sprite2D" parent="."]
+position = Vector2(946.382, -581)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1233" type="Sprite2D" parent="."]
+position = Vector2(1328.07, -450.25)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1234" type="Sprite2D" parent="."]
+position = Vector2(1445.07, -468.25)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")
+
+[node name="Rain1235" type="Sprite2D" parent="."]
+position = Vector2(1371.07, -663.25)
+scale = Vector2(0.582321, 0.582321)
+texture = ExtResource("1_h11rp")

@@ -1,0 +1,10 @@
+{
+	"characters": ["Blan", "Samaa"],
+	"interaction":"interact",
+	"dialogue": [
+		{
+			"character": 1,
+			"text": "Астер,Стрея,Щерна!",
+			"end":true
+		}]
+}

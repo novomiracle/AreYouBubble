@@ -1,9 +1,11 @@
-[gd_scene load_steps=64 format=3 uid="uid://dh0egn5pas6bj"]
+[gd_scene load_steps=66 format=3 uid="uid://dh0egn5pas6bj"]
 
 [ext_resource type="Script" path="res://scripts/main_character.gd" id="1_xgihi"]
+[ext_resource type="Texture2D" uid="uid://7pm7pt0i08cg" path="res://art/ui/Heart full.png" id="2_7nllx"]
 [ext_resource type="Texture2D" uid="uid://5c0pxq5ukfov" path="res://art/jumping_animation/Animation Charecter_00015.png" id="2_nr83a"]
 [ext_resource type="Texture2D" uid="uid://cve021t4njsns" path="res://art/movement_animations/Animation Charecter_00000.png" id="2_ntgvp"]
 [ext_resource type="Texture2D" uid="uid://ci288oi8p43rf" path="res://art/movement_animations/Animation Charecter_00001.png" id="3_c33e5"]
+[ext_resource type="Script" path="res://scenes/heart.gd" id="3_hhia0"]
 [ext_resource type="Texture2D" uid="uid://4sl003qtcnj7" path="res://art/jumping_animation/Animation Charecter_00016.png" id="3_k01mm"]
 [ext_resource type="Texture2D" uid="uid://dmecudx3jlnib" path="res://art/movement_animations/Animation Charecter_00002.png" id="4_hn0by"]
 [ext_resource type="Texture2D" uid="uid://d2jyg44bcam86" path="res://art/jumping_animation/Animation Charecter_00017.png" id="4_tw8bk"]
@@ -270,11 +272,34 @@ radius = 68.593
 radius = 68.3593
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8uko0"]
-radius = 174.562
+radius = 124.945
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(0.75, 0.75)
 script = ExtResource("1_xgihi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HeartFull" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(132, 126)
+scale = Vector2(0.551731, 0.55)
+texture = ExtResource("2_7nllx")
+script = ExtResource("3_hhia0")
+hp = 1
+
+[node name="HeartFull2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(275, 127)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_7nllx")
+script = ExtResource("3_hhia0")
+hp = 2
+
+[node name="HeartFull3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(414, 127)
+scale = Vector2(0.55, 0.556)
+texture = ExtResource("2_7nllx")
+script = ExtResource("3_hhia0")
+hp = 3
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(15, 0)

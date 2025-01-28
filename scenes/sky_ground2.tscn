@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://htnfr62mutde"]
+
+[ext_resource type="Texture2D" uid="uid://dxc6i1ah0ytco" path="res://art/sky/Platform 2.png" id="1_cloxs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iofxo"]
+size = Vector2(1554, 319)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(-253, 52)
+scale = Vector2(0.326195, 0.326195)
+
+[node name="Ground" type="Sprite2D" parent="."]
+position = Vector2(778.675, -171.187)
+scale = Vector2(2.04915, 2.05004)
+texture = ExtResource("1_cloxs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(772.803, -176.772)
+shape = SubResource("RectangleShape2D_iofxo")

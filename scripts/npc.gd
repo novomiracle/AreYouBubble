@@ -7,10 +7,8 @@ var dial;
 var dialogueOn:bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if Global.agrees:
-		dial = load_dialogue(dialogue_accept)
-	else:
-		dial = load_dialogue(dialogue_decline)
+	dial = load_dialogue(dialogue_accept)
+	print("dial")
 	if dial["interaction"] == "ready":
 		start_dialogue()
 	elif dial["interaction"] == "choice":
@@ -31,21 +29,23 @@ func _process(delta: float) -> void:
 				print("interact")
 				Dialogue.talk(Dialogue.dialogueCount)
 				Dialogue.dialogueCount+=1
-		elif dial["interaction"] == "interact":
-			start_dialogue()
+
 
 func start_dialogue():
 	Dialogue.npc = self
 	dialogueOn = true
 	Dialogue.characters = dial.characters
-	Dialogue.change_scene = dial.change_level
+	#Dialogue.change_scene = dial.change_level
 	Dialogue.dialogue = dial.dialogue
 	Dialogue.start()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.name == "player":
-		isIn = true
-
+	if area.name == "player" && dial["interaction"] == "interact":
+		if Global.agrees:
+			dial = load_dialogue(dialogue_accept)
+		else:
+			dial = load_dialogue(dialogue_decline)
+		start_dialogue()
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.name == "player":

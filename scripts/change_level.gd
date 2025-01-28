@@ -2,6 +2,7 @@ extends Node2D
 
 @export var characteristic:String
 @export var agrees:bool
+var used = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -13,6 +14,8 @@ func _process(delta: float) -> void:
 
 
 func _on_change_level_area_entered(area: Area2D) -> void:
-	Global.characterstics.push_front(characteristic)
-	Global.agrees = agrees
+	if !used && area.name == "player":
+		Global.characterstics.push_front(characteristic)
+		Global.agrees = agrees
+		used = true
 	

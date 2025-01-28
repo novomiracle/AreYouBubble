@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl06va6x67ou3"]
+
+[ext_resource type="Script" path="res://scenes/timer_counter.gd" id="1_yvggr"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_yvggr")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(5, 5)
+text = "time:"
+
+[node name="time" type="Label" parent="."]
+offset_left = 202.0
+offset_top = 3.0
+offset_right = 242.0
+offset_bottom = 26.0
+scale = Vector2(5, 5)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

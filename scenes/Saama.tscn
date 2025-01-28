@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b40377nfjiu18"]
+
+[ext_resource type="PackedScene" uid="uid://crtd4t0pf5xce" path="res://scenes/npc.tscn" id="1_cgbro"]
+[ext_resource type="Script" path="res://scenes/samaa.gd" id="2_cwpok"]
+[ext_resource type="Texture2D" uid="uid://chwx2x8nwtgkt" path="res://art/Falcon.png" id="2_rv8v5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27m0v"]
+size = Vector2(3319, 21189)
+
+[node name="StaticBody2D" instance=ExtResource("1_cgbro")]
+script = ExtResource("2_cwpok")
+neutral = null
+interacti = false
+
+[node name="DialogueBox" parent="." index="0"]
+scale = Vector2(1, 1)
+texture = ExtResource("2_rv8v5")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(19.5, -434.5)
+shape = SubResource("RectangleShape2D_27m0v")

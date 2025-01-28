@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c87i33ihcovy6"]
+
+[ext_resource type="PackedScene" uid="uid://crtd4t0pf5xce" path="res://scenes/npc.tscn" id="1_31i46"]
+[ext_resource type="Texture2D" uid="uid://dl2oycxkf76om" path="res://art/fire/Dragon.png" id="2_7w1ne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6a48s"]
+size = Vector2(923.5, 1700)
+
+[node name="StaticBody2D" instance=ExtResource("1_31i46")]
+
+[node name="DialogueBox" parent="." index="0"]
+position = Vector2(172, -43)
+texture = ExtResource("2_7w1ne")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-358.25, -165)
+shape = SubResource("RectangleShape2D_6a48s")

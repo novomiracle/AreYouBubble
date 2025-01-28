@@ -48,8 +48,8 @@ func talk(count):
 		dialogueCount= 0
 		visible = false
 		npc.end_dialogue()
-		if change_scene:
-			Global.sceneSwitcher.next_level()
+		#if change_scene:
+			#Global.sceneSwitcher.next_level()
 func _process(delta):
 	#if Input.is_action_just_pressed("interact") && on:
 	#	print("int")

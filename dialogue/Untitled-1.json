@@ -1,26 +1,34 @@
 {
-	"characters":["puddle","tree"],
-	"interaction":"interact",
-	"change_level":true,
-	"dialogue":[{
-		"character":1,
-		"text":"khgkhgilgkghb",
-		"options":[{
-			"text":"adsdsda",
-			"path":1,
-			
+	"characters": ["Blank", "Harold"],
+	"dialogue": [
+		{
+			"character": 1,
+			"text": "Що за създание! Кой си ти? Какво правиш тук?",
 		},
 		{
-			"text":"fsaf",
-			"path":2,
-		}]
-
-	},{
-		"text":"asfearwsd",
-		"character":0,
-		"end":true
-	},{
-		"character":1,
-		"text":"asfafas",
-	}]
+			"character": 0,
+			"text": "Аз търся своето семейство. Знаеш ли къде са?",
+		},
+		{
+			"character": 1,
+			"text": "Твоето семейство? Как изглеждат?",
+		},
+		{
+			"character": 0,
+			"text": "… не знам, не се сещам. Знаеш ли къде са?",
+		},
+		{
+			"character": 1,
+			"text": "Хмм, странен си. Какви ли не неща съм виждал в тази гора, а сега и мехурче със семейство.",
+		},
+		{
+			"character": 0,
+			"text": "Мехурче ли съм?",
+		},
+		{
+			"character": 1,
+			"text": "Ти не знаеш какво си, аз откъде да знам? Такова празно мехурче като тебе, ще те нарека Блан! Нищо, все пак ще ти помогна, следвай ме, ако имаш смелост!",
+			"end": true
+		}
+	]
 }

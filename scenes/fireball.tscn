@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://dsxcodfmcrvs2"]
+
+[ext_resource type="PackedScene" uid="uid://bolgcrdfdxvv" path="res://projectile.tscn" id="1_celkt"]
+[ext_resource type="Texture2D" uid="uid://decia2mrobhk" path="res://art/fire/Flame 4 (b).png" id="3_806ak"]
+[ext_resource type="Texture2D" uid="uid://bj06gmn5wocl3" path="res://art/fire/Flame 3 (b).png" id="4_l8kq6"]
+
+[sub_resource type="Animation" id="Animation_dtpcr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_l8kq6")]
+}
+
+[sub_resource type="Animation" id="Animation_3s716"]
+resource_name = "idle"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("4_l8kq6"), ExtResource("3_806ak")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a3gxo"]
+_data = {
+"RESET": SubResource("Animation_dtpcr"),
+"idle": SubResource("Animation_3s716")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ccu25"]
+radius = 97.0052
+
+[node name="Node2D" instance=ExtResource("1_celkt")]
+scale = Vector2(-1, 1)
+speed = 500.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+root_node = NodePath("../Sprite")
+libraries = {
+"": SubResource("AnimationLibrary_a3gxo")
+}
+autoplay = "idle"
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2(-227, -7)
+scale = Vector2(1, 1)
+texture = ExtResource("4_l8kq6")
+
+[node name="CollisionShape2D" parent="hurt" index="0"]
+position = Vector2(-21, -5)
+shape = SubResource("CircleShape2D_ccu25")
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="3"]
+position = Vector2(-230, -9)
+scale = Vector2(31, 11.8)

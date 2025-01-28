@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://crkm0gynhamt5"]
+
+[ext_resource type="PackedScene" uid="uid://cogtbb8srrx2r" path="res://hurtyThing.tscn" id="1_7d5fp"]
+[ext_resource type="Texture2D" uid="uid://chi2ew86w3g4a" path="res://art/sky/Icicles.png" id="2_ecvlc"]
+
+[node name="Node2D" instance=ExtResource("1_7d5fp")]
+position = Vector2(0, 26)
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2(-2.38419e-07, -5.4375)
+scale = Vector2(0.625, 0.560025)
+texture = ExtResource("2_ecvlc")
+
+[node name="CollisionShape2D" parent="hurt" index="0"]
+position = Vector2(0, 3)

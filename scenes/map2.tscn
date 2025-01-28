@@ -1,0 +1,37 @@
+[gd_scene load_steps=11 format=3 uid="uid://cw7ni6wich45d"]
+
+[ext_resource type="PackedScene" uid="uid://bp2ury62fnhmf" path="res://scenes/sky_ground1.tscn" id="1_85aa5"]
+[ext_resource type="PackedScene" uid="uid://htnfr62mutde" path="res://scenes/sky_ground2.tscn" id="2_ke4c7"]
+[ext_resource type="PackedScene" uid="uid://c0o7c5gymdpl5" path="res://jumpy_mushroom.tscn" id="3_2m80n"]
+[ext_resource type="PackedScene" uid="uid://crkm0gynhamt5" path="res://scenes/icicles.tscn" id="4_3wqwm"]
+[ext_resource type="PackedScene" uid="uid://cogtbb8srrx2r" path="res://hurtyThing.tscn" id="4_dpey5"]
+[ext_resource type="PackedScene" uid="uid://76ct3thj0j73" path="res://scenes/birdie.tscn" id="5_j2aoq"]
+[ext_resource type="PackedScene" uid="uid://ci24vgsmdi40a" path="res://scenes/coin.tscn" id="6_ymdq5"]
+[ext_resource type="PackedScene" uid="uid://da6gytwk4o5yr" path="res://scenes/nextScener.tscn" id="7_qf23m"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_8cehc"]
+scenes/1/scene = ExtResource("1_85aa5")
+scenes/2/scene = ExtResource("2_ke4c7")
+scenes/3/scene = ExtResource("1_85aa5")
+scenes/4/scene = ExtResource("4_3wqwm")
+scenes/5/scene = ExtResource("5_j2aoq")
+scenes/6/scene = ExtResource("6_ymdq5")
+scenes/9/scene = ExtResource("3_2m80n")
+
+[sub_resource type="TileSet" id="TileSet_qbqii"]
+tile_size = Vector2i(127, 45)
+sources/4 = SubResource("TileSetScenesCollectionSource_8cehc")
+
+[node name="TileMap" type="TileMap"]
+position = Vector2(0, 1)
+tile_set = SubResource("TileSet_qbqii")
+format = 2
+layer_0/tile_data = PackedInt32Array(-262140, 4, 131072, -983026, 4, 131072, -327671, 4, 131072, -1834987, 4, 65536, -1179628, 4, 65536, -2424806, 4, 65536, -2818017, 4, 131072, -3342299, 4, 131072, -3801045, 0, 65536, -3866581, 4, 65536, -2555849, 0, 131072, -5177284, 4, 65536, -4521928, 4, 65536, -2949099, 4, 65536, -3342321, 4, 65536, -3801078, 4, 65536, -4128764, 4, 65536, -4063183, 4, 65536, -5046262, 4, 65536, -1114094, 4, 131072, -3866591, 4, 131072, -4521955, 4, 131072, -5373918, 4, 131072, -5898211, 4, 131072, -6094819, 4, 262144, -6225896, 4, 131072, -5570525, 4, 262144, -5570526, 4, 262144, -4718564, 4, 262144, -3997654, 4, 589824, -4653026, 4, 589824, -6684643, 4, 65536, -7077866, 0, 65536, -7208927, 4, 131072, -7733213, 4, 65536, -7929821, 4, 262144, -7405535, 4, 262144, -7405534, 4, 262144, -7929820, 4, 262144, -6881250, 4, 262144, -7340005, 4, 131072, -7864286, 4, 589824, -8454108, 4, 131072, -5701592, 4, 65536, -5701588, 4, 65536, -5701584, 4, 65536, -5701580, 4, 131072, -5701576, 4, 131072, -5832665, 4, 262144, -5832664, 4, 262144, -5832663, 4, 262144, -5832662, 4, 262144, -5832661, 4, 262144, -5832660, 4, 262144, -5832659, 4, 262144, -5832658, 4, 262144, -5832657, 4, 262144, -5832656, 4, 262144, -5832655, 4, 262144, -5832654, 4, 262144, -5832653, 4, 262144, -5832652, 4, 262144, -5832651, 4, 262144, -5832650, 4, 262144, -5832649, 4, 262144, -5832648, 4, 262144, -5832647, 4, 262144, -5701567, 4, 65536, -6422467, 4, 131072, -6881214, 4, 131072, -7667654, 4, 131072, -8191946, 4, 131072, -8519629, 4, 131072, -7339970, 4, 196608, -7798726, 4, 262144, -5046203, 4, 131072, -4915121, 4, 65536, -4521909, 0, 131072, -5439404, 4, 131072, -5242870, 4, 327680, -8650716, 4, 327680, -8716237, 4, 327680, -7536613, 4, 393216, -7274474, 4, 393216, -5570527, 0, 393216, -6422505, 4, 393216, -4063222, 4, 393216, -8388554, 4, 393216, -2883529, 0, 393216, -4849634, 4, 393216, -8650717, 4, 393216, -8650715, 4, 393216, -8388553, 4, 393216, -8323019, 4, 393216, -8060870, 4, 393216, -7667650, 4, 393216, -7208895, 4, 393216, -5242871, 4, 393216, -5242868, 4, 393216, -4784123, 4, 393216, -5767116, 4, 131072, -5504991, 4, 589824, -7143402, 4, 65536, -4128735, 4, 393216, -4587445, 4, 131072, -7733191, 4, 589824, -6946751, 4, 196608, -5046193, 4, 262144, -4259835, 4, 589824)
+
+[node name="Node2D" parent="." instance=ExtResource("4_dpey5")]
+position = Vector2(618, 926)
+scale = Vector2(339.36, 1)
+
+[node name="Node2D2" parent="." instance=ExtResource("7_qf23m")]
+position = Vector2(10732, -5098)
+sky = true

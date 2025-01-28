@@ -1,6 +1,6 @@
 extends Node2D
 
-var levels:Array = [load("res://levels/test_scene.tscn"),load("res://levels/test2.tscn")]
+var levels:Array = [load("res://levels/test_scene.tscn"),load("res://levels/sky.tscn"),load("res://levels/fire.tscn"),load("res://end_screen.tscn")]
 var firstScene = load("res://levels/test_scene.tscn")
 var lvl = 0;
 func _ready():
@@ -15,7 +15,9 @@ func death():
 	lvl = 0
 func next_level():
 	lvl+=1
+	print(levels[lvl])
 	switch_scene(levels[lvl].instantiate())
+	Global.agrees = true
 
 func retry():
 	switch_scene(firstScene.instantiate())

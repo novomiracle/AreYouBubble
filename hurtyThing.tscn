@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dec3dg8fafqpe" path="res://art/dialogue_box.png" id="1_d585e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5lbji"]
-size = Vector2(141, 120)
+size = Vector2(141, 94)
 
 [node name="Node2D" type="CharacterBody2D"]
 

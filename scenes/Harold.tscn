@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://h3nycb0n5d2s"]
+
+[ext_resource type="PackedScene" uid="uid://crtd4t0pf5xce" path="res://scenes/npc.tscn" id="1_n5jkj"]
+[ext_resource type="Texture2D" uid="uid://bldm6vajaks6g" path="res://art/Rabbit.png" id="2_q8tuq"]
+[ext_resource type="Script" path="res://scenes/harold.gd" id="2_vbd35"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7d2a"]
+size = Vector2(138, 338)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvbvr"]
+size = Vector2(204, 1445)
+
+[node name="StaticBody2D" instance=ExtResource("1_n5jkj")]
+script = ExtResource("2_vbd35")
+runner = false
+
+[node name="DialogueBox" parent="." index="0"]
+position = Vector2(-3.72, -10.5)
+scale = Vector2(0.7, 0.723)
+texture = ExtResource("2_q8tuq")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-17, -7)
+shape = SubResource("RectangleShape2D_o7d2a")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-14, -563.5)
+shape = SubResource("RectangleShape2D_rvbvr")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." index="3"]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cck1rxcy53558"]
+
+[ext_resource type="PackedScene" uid="uid://cogtbb8srrx2r" path="res://hurtyThing.tscn" id="1_1mn2w"]
+[ext_resource type="Texture2D" uid="uid://dy2dlca8las4p" path="res://art/fire/Thorns 3lvl.png" id="2_k0emy"]
+
+[node name="Node2D" instance=ExtResource("1_1mn2w")]
+position = Vector2(0, 26)
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2(-2.38419e-07, 6)
+scale = Vector2(0.199151, 0.199151)
+texture = ExtResource("2_k0emy")
+
+[node name="CollisionShape2D" parent="hurt" index="0"]
+position = Vector2(0, 3)

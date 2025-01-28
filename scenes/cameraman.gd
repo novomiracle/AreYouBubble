@@ -8,4 +8,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.x = player.position.x
+	position = player.position
+	#if abs(position.y - player.position.y ) > 50:
+	#	position.y -= sign(position.y - player.position.y) * 10

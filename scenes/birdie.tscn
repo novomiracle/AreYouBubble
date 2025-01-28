@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://76ct3thj0j73"]
+
+[ext_resource type="Script" path="res://scenes/birdie.gd" id="1_vwb4h"]
+[ext_resource type="Texture2D" uid="uid://chwx2x8nwtgkt" path="res://art/Falcon.png" id="2_o8bg5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_toy7o"]
+radius = 72.1734
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_vwb4h")
+
+[node name="Blank" type="Sprite2D" parent="."]
+position = Vector2(-5, -16)
+rotation = 0.348197
+scale = Vector2(0.0419237, 0.0419237)
+texture = ExtResource("2_o8bg5")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_toy7o")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

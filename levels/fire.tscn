@@ -1,0 +1,50 @@
+[gd_scene load_steps=10 format=3 uid="uid://po4jbjq8ljwy"]
+
+[ext_resource type="Texture2D" uid="uid://bo3xtfxnyipr6" path="res://art/fire/Background for level 3.png" id="1_2xy3x"]
+[ext_resource type="PackedScene" uid="uid://csm7qh4mbhfo6" path="res://levels/fireballSpawner.tscn" id="1_rif3w"]
+[ext_resource type="PackedScene" uid="uid://dlrs5s3dmo417" path="res://levels/fireMap.tscn" id="2_4oa40"]
+[ext_resource type="PackedScene" uid="uid://dh0egn5pas6bj" path="res://scenes/mainCharacter.tscn" id="3_a6va6"]
+[ext_resource type="PackedScene" uid="uid://jieyi2noewvp" path="res://scenes/cameraman.tscn" id="4_qoxg8"]
+[ext_resource type="PackedScene" uid="uid://dsxcodfmcrvs2" path="res://scenes/fireball.tscn" id="5_xvdqn"]
+[ext_resource type="PackedScene" uid="uid://da6gytwk4o5yr" path="res://scenes/nextScener.tscn" id="6_p3uag"]
+[ext_resource type="PackedScene" uid="uid://cogtbb8srrx2r" path="res://hurtyThing.tscn" id="8_6a150"]
+[ext_resource type="PackedScene" uid="uid://c87i33ihcovy6" path="res://levels/Dragon.tscn" id="9_opfeg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="BackgroundForLevel3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(963.5, 540)
+scale = Vector2(0.50026, 0.496296)
+texture = ExtResource("1_2xy3x")
+
+[node name="Node2D" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_rif3w")]
+position = Vector2(397, 352)
+player = NodePath("../CharacterBody2D")
+
+[node name="TileMap" parent="." instance=ExtResource("2_4oa40")]
+position = Vector2(502, 398)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_a6va6")]
+position = Vector2(511, 168)
+scale = Vector2(0.75, 0.769268)
+
+[node name="Node2D2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_qoxg8")]
+position = Vector2(207, 1520)
+player = NodePath("../CharacterBody2D")
+
+[node name="Node2D3" parent="." instance=ExtResource("5_xvdqn")]
+position = Vector2(2043, -832)
+
+[node name="Node2D4" parent="." instance=ExtResource("6_p3uag")]
+position = Vector2(15551, -944)
+
+[node name="Node2D5" parent="." instance=ExtResource("8_6a150")]
+position = Vector2(803, 2181)
+scale = Vector2(1454.62, -0.839159)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("9_opfeg")]
+position = Vector2(14837, -130)
+dialogue_accept = "res://dialogue/Dragomir.json"
